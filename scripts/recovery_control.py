@@ -1,7 +1,7 @@
 """On replacement VM, fill the GPU and enforce a two-hour recovery deadline."""
 import subprocess,sys,time,os,signal,json,datetime
 from pathlib import Path
-R=Path('/content/b10-122b')
+R=Path('/content/quant-ladder')
 if '--child' not in sys.argv:
  p=subprocess.Popen(['nohup',sys.executable,str(R/'scripts/recovery_control.py'),'--child'],stdout=(R/'recovery_control.log').open('a'),stderr=subprocess.STDOUT,start_new_session=True)
  print('RECOVERY_CONTROLLER_PID',p.pid)

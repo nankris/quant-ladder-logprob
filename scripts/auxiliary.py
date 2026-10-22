@@ -1,7 +1,7 @@
 """Second serial queue on the SAME VM/GPU; per-format locks prevent duplicates."""
 import os,sys,site,glob,subprocess,json,time,traceback
 from pathlib import Path
-R=Path('/content/b10-122b'); os.chdir(R); start=time.time()
+R=Path('/content/quant-ladder'); os.chdir(R); start=time.time()
 libs=[p for s in site.getsitepackages() for p in glob.glob(s+'/nvidia/*/lib')]
 env=dict(os.environ,LD_LIBRARY_PATH=':'.join(libs)+':'+os.environ.get('LD_LIBRARY_PATH',''),OMP_NUM_THREADS='2',OPENBLAS_NUM_THREADS='1')
 try:

@@ -1,6 +1,6 @@
 import os,json,sys,site,glob,subprocess
 from pathlib import Path
-R=Path('/content/b10-122b')
+R=Path('/content/quant-ladder')
 if '--child' not in sys.argv:
  libs=[p for s in site.getsitepackages() for p in glob.glob(s+'/nvidia/*/lib')]
  env=dict(os.environ,LD_LIBRARY_PATH=':'.join(libs)+':'+os.environ.get('LD_LIBRARY_PATH',''))

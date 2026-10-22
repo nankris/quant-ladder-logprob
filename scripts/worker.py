@@ -1,6 +1,6 @@
 import sys,subprocess,os,time,json,site,glob,traceback,tarfile
 from pathlib import Path
-R=Path('/content/b10-122b'); os.chdir(R); start=time.time()
+R=Path('/content/quant-ladder'); os.chdir(R); start=time.time()
 def run(cmd,log='install.log',env=None):
  with (R/'results'/log).open('a') as f: subprocess.run(cmd,stdout=f,stderr=subprocess.STDOUT,env=env,check=True)
 try:

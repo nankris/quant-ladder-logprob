@@ -1,6 +1,6 @@
 from pathlib import Path
 import subprocess,tarfile,json,datetime
-R=Path('/content/b10-122b')
+R=Path('/content/quant-ladder')
 for name in ['results/status.json','worker.log']:
  p=R/name
  if p.exists(): print(name,p.read_text()[-2500:])

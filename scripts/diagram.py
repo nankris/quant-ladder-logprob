@@ -7,7 +7,7 @@ def box(i,x,y,w,h,text,color):
  els.append(dict(common,id=f't{i}',type='text',x=x+14,y=y+17,width=w-28,height=67.5,text=text,fontSize=18,fontFamily=1,textAlign='center',verticalAlign='top',baseline=63,containerId=None,originalText=text,autoResize=True,lineHeight=1.25,backgroundColor='transparent',roundness=None))
 def arrow(i,x,y,dx,dy):
  els.append(dict(id=f'a{i}',type='arrow',x=x,y=y,width=abs(dx),height=abs(dy),angle=0,strokeColor='#25334a',backgroundColor='transparent',fillStyle='solid',strokeWidth=2,strokeStyle='solid',roughness=1,opacity=100,groupIds=[],frameId=None,roundness={'type':2},seed=i*87,version=1,versionNonce=i,isDeleted=False,boundElements=None,updated=1,link=None,locked=False,points=[[0,0],[dx,dy]],lastCommittedPoint=None,startBinding=None,endBinding=None,startArrowhead=None,endArrowhead='arrow',elbowed=False))
-box(1,20,30,270,115,'Public ARC-Easy\nExclude 122 + pilot\nFreeze fresh questions','#e9effa')
+box(1,20,30,270,115,'Public ARC-Easy\nExclude original 150 + pilot\nFreeze fresh questions','#e9effa')
 box(2,355,30,280,115,'Qwen3-0.6B\nBF16, Q8, Q4, Q3, Q2\nPinned GGUF weights','#eaf5ee')
 arrow(1,295,87,55,0)
 box(3,30,230,275,120,'Four cyclic rotations\nScore A / B / C / D\nMap back to answer text','#fff4d9')

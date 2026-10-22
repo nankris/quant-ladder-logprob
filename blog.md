@@ -4,7 +4,7 @@ A quantization result that looked like an improvement was also a test of how muc
 
 The popular promise is that four-bit models preserve quality while taking much less space. The [GPTQ paper](https://arxiv.org/abs/2210.17323) describes “negligible accuracy degradation” for its own models and quantization method. That is an attractive engineering trade: fit a model on cheaper hardware without paying much in wrong answers. It is not a guarantee for every model or every scoring script.
 
-My headline from this rerun is **-2.03 percentage points for Q4 versus BF16**, after balancing the option letters. That is the number I would carry forward, with its uncertainty, rather than my first run's apparent improvement.
+My headline from this rerun is **-2.03 percentage points for Q4 versus BF16**, after balancing the option letters. That is the number I would carry forward, with its uncertainty, rather than my [first run's](https://github.com/nankris/quantization-ladder) apparent improvement.
 
 ## What I expected, and what the first run said
 
@@ -105,4 +105,4 @@ A post hoc check of the fresh test split alone gave Q4 a -1.68-point difference,
 
 The useful habit is to inspect what a score rewards before deciding what a smaller model preserved.
 
-Code: <repo link placeholder>
+Code: https://github.com/nankris/quant-ladder-logprob
